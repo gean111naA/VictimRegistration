@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Protector - Register Victim</title>
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+
+<body>
+<div class="header">
+
+    <button class="emergency-button" onclick="window.location.href='tel:0800500333'">
+        We can hear you. <br> 0800 500 333
+    </button>
+
+
+    <div class="logo">
+        <img th:src="@{/logo.png}" alt="Logo" id="logo-image" src="">
+    </div>
+
+    
+
+    <h1 class="main-title">Protector</h1>
+</div>
+
+
+<div class="register-form-container">
+    <form th:action="@{/victim/register}" method="post">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Nume:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Adresa:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div class="button-container">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</div>
+
+
+<footer>
+    <h2 class="subtitle">Register Victim</h2>
+</footer>
+
+</body>
+
+</html>
+
