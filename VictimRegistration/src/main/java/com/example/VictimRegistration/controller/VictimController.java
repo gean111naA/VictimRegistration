@@ -27,16 +27,15 @@ public class VictimController {
     public String registerVictim(@Valid Victim victim, BindingResult bindingResult, Model model) {
 
         if (bindingResult.hasErrors()) {
-            // Dacă există erori, întoarce la pagina de înregistrare și afișează erorile
+           
             System.out.println("Binding errors found: " + bindingResult.getAllErrors());
             return "register";
         }
 
         try {
-            // Salvarea în baza de date
+           
             victimRepository.save(victim);
 
-            // Afișarea unui mesaj de succes
             model.addAttribute("message", "Victim registered successfully!");
             return "success";
         } catch (Exception e) {
