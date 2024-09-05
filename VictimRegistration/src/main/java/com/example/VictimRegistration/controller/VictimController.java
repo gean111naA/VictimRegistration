@@ -33,11 +33,10 @@ public class VictimController {
         }
 
         try {
-           
             victimRepository.save(victim);
-
             model.addAttribute("message", "Victim registered successfully!");
             return "success";
+            
         } catch (Exception e) {
             // Loghează eroarea și returnează o pagină de eroare
             e.printStackTrace();
